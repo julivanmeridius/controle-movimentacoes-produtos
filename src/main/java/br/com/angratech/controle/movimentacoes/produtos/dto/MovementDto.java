@@ -2,10 +2,13 @@ package br.com.angratech.controle.movimentacoes.produtos.dto;
 
 import java.io.Serializable;
 
+import lombok.Data;
+
 /**
  * DTO 
  * @author Julivan Silva 
  */
+@Data
 public class MovementDto implements Serializable {
 
 	/** UID **/
