@@ -17,9 +17,9 @@ import br.com.angratech.controle.movimentacoes.produtos.domain.ManualMovementPK;
  */
 public interface ManualMovementRepository extends JpaRepository<ManualMovement, ManualMovementPK> {
 
-	@Query("from ManualMovementEntity mme where mme.id.year = :year and mme.id.month = :month")	
+	@Query("from ManualMovement mme where mme.id.year = :year and mme.id.month = :month")	
 	List<ManualMovement> findByYearAndMonth(@Param("year") int year, @Param("month") int month);
 
-	@Query("select max(mme.id.release)+1 from ManualMovementEntity mme where mme.id.year = :year and mme.id.month = :month")	
+	@Query("select max(mme.id.release)+1 from ManualMovement mme where mme.id.year = :year and mme.id.month = :month")	
 	Optional<Long> findNextRelease(@Param("year") int year, @Param("month") int month);
 }

@@ -1,6 +1,5 @@
 package br.com.angratech.controle.movimentacoes.produtos.domain;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -20,10 +19,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "movimento_manual")
-public class ManualMovement implements Serializable {
-
-	/** UID **/
-	private static final long serialVersionUID = 1201712022668464993L;
+public class ManualMovement {
 	
 	@EmbeddedId
 	private ManualMovementPK id;
@@ -43,5 +39,4 @@ public class ManualMovement implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "code", referencedColumnName = "cod_produto")
 	private Product product;
-	
 }
