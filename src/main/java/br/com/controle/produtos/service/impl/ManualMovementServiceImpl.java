@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.service.impl;
+package br.com.controle.produtos.service.impl;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -7,18 +7,18 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
-import org.jvnet.hk2.annotations.Service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import br.com.angratech.controle.movimentacoes.produtos.domain.ManualMovement;
-import br.com.angratech.controle.movimentacoes.produtos.domain.Product;
-import br.com.angratech.controle.movimentacoes.produtos.dto.MovementDto;
-import br.com.angratech.controle.movimentacoes.produtos.mapper.ManualMovementMapper;
-import br.com.angratech.controle.movimentacoes.produtos.repository.ManualMovementRepository;
-import br.com.angratech.controle.movimentacoes.produtos.repository.ProductRepository;
-import br.com.angratech.controle.movimentacoes.produtos.service.ManualMovementService;
+import br.com.controle.produtos.domain.ManualMovement;
+import br.com.controle.produtos.domain.Product;
+import br.com.controle.produtos.dto.MovementDto;
+import br.com.controle.produtos.mapper.ManualMovementMapper;
+import br.com.controle.produtos.repository.ManualMovementRepository;
+import br.com.controle.produtos.repository.ProductRepository;
+import br.com.controle.produtos.service.ManualMovementService;
 
 /**
  * Service Layer.

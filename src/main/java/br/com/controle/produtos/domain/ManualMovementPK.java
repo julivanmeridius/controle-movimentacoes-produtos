@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.domain;
+package br.com.controle.produtos.domain;
 
 import java.io.Serializable;
 
@@ -33,5 +33,5 @@ public class ManualMovementPK implements Serializable {
 	
 	@Column(name = "cod_cosif", length = 11)
 	private String cosifCode; 
-		
+	
 }

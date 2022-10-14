@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.dto;
+package br.com.controle.produtos.dto;
 
 import java.io.Serializable;
 import java.util.Date;

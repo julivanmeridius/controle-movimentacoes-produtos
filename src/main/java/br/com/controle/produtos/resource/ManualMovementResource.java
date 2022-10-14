@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.resource;
+package br.com.controle.produtos.resource;
 
 import java.util.List;
 
@@ -13,11 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.angratech.controle.movimentacoes.produtos.dto.MovementDto;
-import br.com.angratech.controle.movimentacoes.produtos.service.ManualMovementService;
+import br.com.controle.produtos.dto.MovementDto;
+import br.com.controle.produtos.service.ManualMovementService;
+import io.swagger.annotations.ApiOperation;
 
 /**
- * Resource para Movements operations
+ * Resource para MOVIMENTO_MANUAL operations
  * 
  * @author Julivan Silva
  */
@@ -27,19 +28,31 @@ public class ManualMovementResource {
 
 	@Autowired
 	private ManualMovementService service;
-
-	@PostMapping
+	
+	@ApiOperation(
+			value = "${swagger.api.criar.movimento.value}",
+			notes = "${swagger.api.criar.movimento.notes}",
+			tags = { "Movimento" })
+	@PostMapping("/criar")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void save(@RequestBody MovementDto dto) {
 		service.saveManualMovement(dto);
 	}
-
-	@GetMapping
+	
+	@ApiOperation(
+			value = "${swagger.api.consulta.todos.movimentos.value}",
+			notes = "${swagger.api.consulta.todos.movimentos.notes}",
+			tags = { "Movimento" })
+	@GetMapping("/buscar")
 	public ResponseEntity<List<MovementDto>> findAll() {
 		return ResponseEntity.ok(service.getAllManualMovements());
 	}
 
-	@GetMapping("/{year}/{month}")
+	@ApiOperation(
+			value = "${swagger.api.consulta.movimentos.periodo.value}",
+			notes = "${swagger.api.consulta.movimentos.periodo.notes}",
+			tags = { "Movimento" })
+	@GetMapping("/buscar/{year}/{month}")
 	public ResponseEntity<List<MovementDto>> findAll(@PathVariable int year, @PathVariable int month) {
 		List<MovementDto> movements = service.findByYearAndMonth(year, month);
 		return movements.isEmpty() ? ResponseEntity.noContent().build() : ResponseEntity.ok(movements);

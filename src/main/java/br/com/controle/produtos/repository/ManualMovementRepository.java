@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.repository;
+package br.com.controle.produtos.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,8 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import br.com.angratech.controle.movimentacoes.produtos.domain.ManualMovement;
-import br.com.angratech.controle.movimentacoes.produtos.domain.ManualMovementPK;
+import br.com.controle.produtos.domain.ManualMovement;
+import br.com.controle.produtos.domain.ManualMovementPK;
 
 /**
  * Repository Tabela - movimento_manual

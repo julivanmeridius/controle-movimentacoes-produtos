@@ -1,12 +1,12 @@
-package br.com.angratech.controle.movimentacoes.produtos.service;
+package br.com.controle.produtos.service;
 
 import java.util.List;
 
-import br.com.angratech.controle.movimentacoes.produtos.domain.ManualMovement;
-import br.com.angratech.controle.movimentacoes.produtos.dto.MovementDto;
+import br.com.controle.produtos.domain.ManualMovement;
+import br.com.controle.produtos.dto.MovementDto;
 
 public interface ManualMovementService {
-	
+
 	/**
 	 * <p>
 	 * Listar os Movimentos Manuais existentes.

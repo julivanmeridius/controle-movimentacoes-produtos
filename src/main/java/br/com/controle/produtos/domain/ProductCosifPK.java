@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.domain;
+package br.com.controle.produtos.domain;
 
 import java.io.Serializable;
 
@@ -23,5 +23,6 @@ public class ProductCosifPK implements Serializable {
 	private String productCode; 
 	
 	@Column(name = "cod_cosif", length = 11)
-	private String cosifCode;	
+	private String cosifCode;
+	
 }

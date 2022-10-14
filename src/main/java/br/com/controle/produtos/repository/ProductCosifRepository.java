@@ -1,9 +1,9 @@
-package br.com.angratech.controle.movimentacoes.produtos.repository;
+package br.com.controle.produtos.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.angratech.controle.movimentacoes.produtos.domain.ProductCosif;
-import br.com.angratech.controle.movimentacoes.produtos.domain.ProductCosifPK;
+import br.com.controle.produtos.domain.ProductCosif;
+import br.com.controle.produtos.domain.ProductCosifPK;
 
 /**
  * Repository Tabela - produto_cosif

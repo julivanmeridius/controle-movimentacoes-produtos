@@ -1,8 +1,8 @@
-package br.com.angratech.controle.movimentacoes.produtos.repository;
+package br.com.controle.produtos.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.angratech.controle.movimentacoes.produtos.domain.Product;
+import br.com.controle.produtos.domain.Product;
 
 /**
  * Repository Tabela - Produto
@@ -10,5 +10,5 @@ import br.com.angratech.controle.movimentacoes.produtos.domain.Product;
  * @author Julivan Silva
  */
 public interface ProductRepository extends JpaRepository<Product, String> {
-		
+
 }

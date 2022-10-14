@@ -1,17 +1,12 @@
-package br.com.angratech.controle.movimentacoes.produtos.mapper;
+package br.com.controle.produtos.mapper;
 
 import org.springframework.stereotype.Component;
 
-import br.com.angratech.controle.movimentacoes.produtos.domain.ManualMovement;
-import br.com.angratech.controle.movimentacoes.produtos.domain.ManualMovementPK;
-import br.com.angratech.controle.movimentacoes.produtos.domain.Product;
-import br.com.angratech.controle.movimentacoes.produtos.dto.MovementDto;
+import br.com.controle.produtos.domain.ManualMovement;
+import br.com.controle.produtos.domain.ManualMovementPK;
+import br.com.controle.produtos.domain.Product;
+import br.com.controle.produtos.dto.MovementDto;
 
-/**
- * Classe Mapper para conversoes de objetos entre as camadas.
- * 
- * @author Julivan Silva
- */
 @Component
 public class ManualMovementMapper {
 

@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.resource;
+package br.com.controle.produtos.resource;
 
 import java.util.List;
 
@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.angratech.controle.movimentacoes.produtos.domain.ProductCosif;
-import br.com.angratech.controle.movimentacoes.produtos.repository.ProductCosifRepository;
+import br.com.controle.produtos.domain.ProductCosif;
+import br.com.controle.produtos.repository.ProductCosifRepository;
+import io.swagger.annotations.ApiOperation;
 
 /**
  * Resource para PRODUTO_COSIF operations
@@ -22,8 +23,12 @@ public class ProductCosifResource {
 
 	@Autowired
     private ProductCosifRepository repository;
-
-    @GetMapping
+	
+	@ApiOperation(
+			value = "${swagger.api.consulta.todos.cosif.value}",
+			notes = "${swagger.api.consulta.todos.cosif.notes}",
+			tags = { "Produto Cosif" })
+    @GetMapping("/buscar")
     public ResponseEntity<List<ProductCosif>> findAll() {
         return ResponseEntity.ok(repository.findAll());
     }

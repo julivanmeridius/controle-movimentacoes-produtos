@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.domain;
+package br.com.controle.produtos.domain;
 
 import java.util.Date;
 
@@ -20,7 +20,7 @@ import lombok.Data;
 @Entity
 @Table(name = "movimento_manual")
 public class ManualMovement {
-	
+
 	@EmbeddedId
 	private ManualMovementPK id;
 	
@@ -39,4 +39,5 @@ public class ManualMovement {
 	@ManyToOne
 	@JoinColumn(name = "code", referencedColumnName = "cod_produto")
 	private Product product;
+	
 }

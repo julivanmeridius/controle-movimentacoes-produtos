@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.domain;
+package br.com.controle.produtos.domain;
 
 import java.io.Serializable;
 
@@ -29,5 +29,5 @@ public class ProductCosif implements Serializable {
 	private String classification; 
 	
 	@Column(name = "sta_status")
-	private boolean status;	
+	private boolean status;
 }

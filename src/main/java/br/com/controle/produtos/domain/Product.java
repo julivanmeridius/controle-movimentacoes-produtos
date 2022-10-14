@@ -1,4 +1,4 @@
-package br.com.angratech.controle.movimentacoes.produtos.domain;
+package br.com.controle.produtos.domain;
 
 import java.io.Serializable;
 
@@ -34,5 +34,5 @@ public class Product implements Serializable {
 	
 	@Column(name = "sta_status")
 	private boolean status;
-	 	
+	
 }
